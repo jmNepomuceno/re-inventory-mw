@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/re-inventory-mw/static/css/main.6c0577aa.chunk.css",
-    "main.js": "/re-inventory-mw/static/js/main.ffd06b74.chunk.js",
-    "main.js.map": "/re-inventory-mw/static/js/main.ffd06b74.chunk.js.map",
+    "main.js": "/re-inventory-mw/static/js/main.7598f808.chunk.js",
+    "main.js.map": "/re-inventory-mw/static/js/main.7598f808.chunk.js.map",
     "runtime-main.js": "/re-inventory-mw/static/js/runtime-main.c51dca52.js",
     "runtime-main.js.map": "/re-inventory-mw/static/js/runtime-main.c51dca52.js.map",
     "static/js/2.fb2edb92.chunk.js": "/re-inventory-mw/static/js/2.fb2edb92.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.c51dca52.js",
     "static/js/2.fb2edb92.chunk.js",
     "static/css/main.6c0577aa.chunk.css",
-    "static/js/main.ffd06b74.chunk.js"
+    "static/js/main.7598f808.chunk.js"
   ]
 }
