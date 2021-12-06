@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/re-inventory-mw/static/css/main.6c0577aa.chunk.css",
+    "main.js": "/re-inventory-mw/static/js/main.ffd06b74.chunk.js",
+    "main.js.map": "/re-inventory-mw/static/js/main.ffd06b74.chunk.js.map",
+    "runtime-main.js": "/re-inventory-mw/static/js/runtime-main.c51dca52.js",
+    "runtime-main.js.map": "/re-inventory-mw/static/js/runtime-main.c51dca52.js.map",
+    "static/js/2.fb2edb92.chunk.js": "/re-inventory-mw/static/js/2.fb2edb92.chunk.js",
+    "static/js/2.fb2edb92.chunk.js.map": "/re-inventory-mw/static/js/2.fb2edb92.chunk.js.map",
+    "index.html": "/re-inventory-mw/index.html",
+    "static/css/main.6c0577aa.chunk.css.map": "/re-inventory-mw/static/css/main.6c0577aa.chunk.css.map",
+    "static/js/2.fb2edb92.chunk.js.LICENSE.txt": "/re-inventory-mw/static/js/2.fb2edb92.chunk.js.LICENSE.txt",
+    "static/media/bpsuLogo.png": "/re-inventory-mw/static/media/bpsuLogo.bbe84ba6.png",
+    "static/media/inventory.png": "/re-inventory-mw/static/media/inventory.7ebe056f.png",
+    "static/media/index.css": "/re-inventory-mw/static/media/inventoryBg.8978431e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c51dca52.js",
+    "static/js/2.fb2edb92.chunk.js",
+    "static/css/main.6c0577aa.chunk.css",
+    "static/js/main.ffd06b74.chunk.js"
+  ]
+}
