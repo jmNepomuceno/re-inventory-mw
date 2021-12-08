@@ -150,7 +150,112 @@ body{
     transition: 0.5s;
     width:100%;
     height:100%;
+    background: #01212d;
 }
+
+.main_index .card .back-content img{
+    position:absolute;
+    top: 2%;
+    left:40%;
+    width:20%;
+    height:50px;
+}
+
+.main_index .card .back-content button{
+    position: absolute;
+    top:3%;
+    left:4%;
+    background:transparent;
+    border:none;
+    color:whitesmoke;
+    font-size:0.85rem;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.main_index .card .back-content #first-name-txt,
+.main_index .card .back-content #first-name-txt,
+.main_index .card .back-content #username-txt{
+    position:absolute;
+    top:25%;
+    left:5%;
+    width:90%;
+    height:30px;
+    background: whitesmoke;
+    border:1px solid whitesmoke;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0.8;
+    outline: none;
+}
+
+.main_index .card .back-content #last-name-txt,
+.main_index .card .back-content #last-name-txt,
+.main_index .card .back-content #password-txt{
+    position:absolute;
+    top:40%;
+    left:5%;
+    width:90%;
+    height:30px;
+    background: whitesmoke;
+    border:1px solid whitesmoke;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0.8;
+    outline: none;
+}
+
+.main_index .card .back-content #id-num-txt,
+.main_index .card .back-content #id-num-txt{
+    position:absolute;
+    top:55%;
+    left:5%;
+    width:90%;
+    height:30px;
+    background: whitesmoke;
+    border:1px solid whitesmoke;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0.8;
+    outline: none;
+}
+
+.main_index .card .back-content #first-name-img,
+.main_index .card .back-content #last-name-img,
+.main_index .card .back-content #username-img,
+.main_index .card .back-content #password-img,
+.main_index .card .back-content #id-num-img{
+    position:absolute;
+    top: 26%;
+    left:6%;
+    width:9%;
+    height:25px;
+    z-index: 1;
+}
+
+.main_index .card .back-content #last-name-img,
+.main_index .card .back-content #password-img{
+    top: 41%;
+}
+
+.main_index .card .back-content #id-num-img{
+    top: 55.5%;
+}
+
 
 /* .main_index .card .content-1{
     left: -100%;

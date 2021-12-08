@@ -80,12 +80,16 @@ class LogIn extends React.Component {
 
                     {/* back content */}
                     <div style={this.state[1]["back"]} className="back-content"> 
-                        <img src={require('../imgs/index_imgs/teachersImg.jpg').default} alt="teachers-img" />
-                        <p> 
-                            <span>Back Content</span><br/><br/> 
-                            Teachers can Borrow and Return items from this Inventory.
-                        </p>
-                        <button>Visit As</button>
+                        <button>Back</button>
+
+                        <img id="login-icon-img" src={require('../imgs/index_imgs/login.png').default} alt="login_icon"/>
+                        <img id="first-name-img" src={require('../imgs/index_imgs/user.png').default} alt="user_icon"/>
+                        <img id="last-name-img" src={require('../imgs/index_imgs/user.png').default} alt="user_icon"/>
+                        <img id="id-num-img" src={require('../imgs/index_imgs/id.png').default} alt="user_icon"/>
+                        
+                        <input id="first-name-txt" type="text" placeholder="First Name" />
+                        <input id="last-name-txt" type="text" placeholder="Last Name" />
+                        <input id="id-num-txt" type="text" placeholder="ID Number" />
                     </div>
                 </div>
 
@@ -102,12 +106,14 @@ class LogIn extends React.Component {
 
                     {/* back content */}
                     <div style={this.state[2]["back"]} className="back-content"> 
-                        <img src={require('../imgs/index_imgs/teachersImg.jpg').default} alt="teachers-img" />
-                        <p> 
-                            <span>Back Content</span><br/><br/> 
-                            Teachers can Borrow and Return items from this Inventory.
-                        </p>
-                        <button>Visit As</button>
+                        <button>Back</button>
+
+                        <img src={require('../imgs/index_imgs/login.png').default} alt="login_icon"/>
+                        <img id="username-img" src={require('../imgs/index_imgs/user.png').default} alt="user_icon"/>
+                        <img id="password-img" src={require('../imgs/index_imgs/password.png').default} alt="user_icon"/>
+
+                        <input id="username-txt" type="text" placeholder="Username" />
+                        <input id="password-txt" type="text" placeholder="Password" />
                     </div>
                 </div>
 
@@ -124,12 +130,16 @@ class LogIn extends React.Component {
 
                     {/* back content */}
                     <div style={this.state[3]["back"]} className="back-content"> 
-                        <img src={require('../imgs/index_imgs/teachersImg.jpg').default} alt="teachers-img" />
-                        <p> 
-                            <span>Back Content</span><br/><br/> 
-                            Teachers can Borrow and Return items from this Inventory.
-                        </p>
-                        <button>Visit As</button>
+                        <button>Back</button>
+
+                        <img id="login-icon-img" src={require('../imgs/index_imgs/login.png').default} alt="login_icon"/>
+                        <img id="first-name-img" src={require('../imgs/index_imgs/user.png').default} alt="user_icon"/>
+                        <img id="last-name-img" src={require('../imgs/index_imgs/user.png').default} alt="user_icon"/>
+                        <img id="id-num-img" src={require('../imgs/index_imgs/id.png').default} alt="user_icon"/>
+
+                        <input id="first-name-txt" type="text" placeholder="First Name" />
+                        <input id="last-name-txt" type="text" placeholder="Last Name" />
+                        <input id="id-num-txt" type="text" placeholder="ID Number" />
                     </div>
                 </div>
 
