@@ -35,17 +35,26 @@ class LogIn extends React.Component {
                     top: "0"
                 }
             },
+            logIn_btn_styles : {
+                pointerEvents : "none"
+            },
+            Borrow_btn_styles : {
+                opacity : "1"
+            },
+            Return_btn_styles : {
+                opacity : "1"
+            }
         }
     }
 
-    handleFrontCLick = (index,side) =>{
+    handleFrontCLick = (index,side,where) =>{
         this.setState(prevState =>({
             ...prevState,
             [index] : {
                 ...prevState[index],
                 [side] : {
                     ...prevState[index][side],
-                    left : "-100%",
+                    left : (where === "front") ? "-100%" : "0",
                 },
             }
         }))
@@ -56,10 +65,37 @@ class LogIn extends React.Component {
                 ...prevState[index],
                 "back" : {
                     ...prevState[index]["back"],
-                    left : "0",
+                    left : (where === "front") ? "0" : "100%",
                 },
             }
         }))
+    }
+
+    handleBrwRtrnClick = (what) =>{
+        this.setState({
+            logIn_btn_styles : {
+                pointerEvents : "auto"
+            }
+        })
+
+        this.setState({
+            [what] : {
+                opacity : "0.3"
+            }
+        })
+
+        what = (what === "Borrow_btn_styles") ? "Return_btn_styles" : "Borrow_btn_styles"
+
+        this.setState({
+            [what] : {
+                opacity : "1"
+            }
+        })
+    }
+
+    handleLogInClick = () =>{
+        // (this.state.valid_to_login) && console.log("Kyla")
+        console.log("kyla")
     }
 
     render(){
@@ -75,21 +111,38 @@ class LogIn extends React.Component {
                             <span>Teachers</span><br/><br/> 
                             Teachers can Borrow and Return items from this Inventory.
                         </p>
-                        <button onClick={()=>this.handleFrontCLick(1,"front")}>Visit As</button>
+                        <button onClick={()=>this.handleFrontCLick(1,"front","front")}>Visit As</button>
                     </div>
 
                     {/* back content */}
                     <div style={this.state[1]["back"]} className="back-content"> 
-                        <button>Back</button>
+                        <button id="back-btn" onClick={()=>this.handleFrontCLick(1,"front", "back")}>Back</button>
 
                         <img id="login-icon-img" src={require('../imgs/index_imgs/login.png').default} alt="login_icon"/>
                         <img id="first-name-img" src={require('../imgs/index_imgs/user.png').default} alt="user_icon"/>
                         <img id="last-name-img" src={require('../imgs/index_imgs/user.png').default} alt="user_icon"/>
                         <img id="id-num-img" src={require('../imgs/index_imgs/id.png').default} alt="user_icon"/>
                         
-                        <input id="first-name-txt" type="text" placeholder="First Name" />
-                        <input id="last-name-txt" type="text" placeholder="Last Name" />
-                        <input id="id-num-txt" type="text" placeholder="ID Number" />
+                        <button 
+                            onClick={() => this.handleBrwRtrnClick("Return_btn_styles")} 
+                            style={this.state.Borrow_btn_styles}
+                            id="borrow-btn">
+                            Borrow
+                        </button>
+                        <button 
+                            onClick={() => this.handleBrwRtrnClick("Borrow_btn_styles")} 
+                            style={this.state.Return_btn_styles}
+                            id="return-btn">
+                            Return
+                        </button>
+
+                        <form>
+                            <input id="first-name-txt" type="text" placeholder="First Name" autoComplete="off" required />
+                            <input id="last-name-txt" type="text" placeholder="Last Name" autoComplete="off" required />
+                            <input id="id-num-txt" type="text" placeholder="ID Number" autoComplete="off" required />
+
+                            <button style={this.state.logIn_btn_styles} onClick={this.handleLogInClick} id="login-btn"> <span>LOG IN</span> </button>
+                        </form>
                     </div>
                 </div>
 
@@ -101,19 +154,24 @@ class LogIn extends React.Component {
                             <span>Admin</span><br/> <br/> 
                             Admin is the one who manage all the items in the Inventory.
                         </p>
-                        <button onClick={()=>this.handleFrontCLick(2,"front")}>Visit As</button>
+                        <button onClick={()=>this.handleFrontCLick(2,"front","front")}>Visit As</button>
                     </div>
 
                     {/* back content */}
                     <div style={this.state[2]["back"]} className="back-content"> 
-                        <button>Back</button>
+                        <button id="back-btn" onClick={()=>this.handleFrontCLick(2,"front", "back")}>Back</button>
 
                         <img src={require('../imgs/index_imgs/login.png').default} alt="login_icon"/>
                         <img id="username-img" src={require('../imgs/index_imgs/user.png').default} alt="user_icon"/>
                         <img id="password-img" src={require('../imgs/index_imgs/password.png').default} alt="user_icon"/>
 
-                        <input id="username-txt" type="text" placeholder="Username" />
-                        <input id="password-txt" type="text" placeholder="Password" />
+                        <form> 
+                            <input id="username-txt" type="text" placeholder="Username" autoComplete="off" required />
+                            <input id="password-txt" type="text" placeholder="Password" autoComplete="off" required />
+
+                            <button id="login-btn"> <span>LOG IN</span> </button>
+                        </form>
+
                     </div>
                 </div>
 
@@ -125,21 +183,39 @@ class LogIn extends React.Component {
                             <span>Students</span><br/> <br/> 
                             Students can Borrow and Return items from this Inventory.
                         </p>
-                        <button onClick={()=>this.handleFrontCLick(3,"front")}>Visit As</button>
+                        <button onClick={()=>this.handleFrontCLick(3,"front","front")}>Visit As</button>
                     </div>
 
                     {/* back content */}
                     <div style={this.state[3]["back"]} className="back-content"> 
-                        <button>Back</button>
+                        <button id="back-btn" onClick={()=>this.handleFrontCLick(3,"front", "back")}>Back</button>
 
                         <img id="login-icon-img" src={require('../imgs/index_imgs/login.png').default} alt="login_icon"/>
                         <img id="first-name-img" src={require('../imgs/index_imgs/user.png').default} alt="user_icon"/>
                         <img id="last-name-img" src={require('../imgs/index_imgs/user.png').default} alt="user_icon"/>
                         <img id="id-num-img" src={require('../imgs/index_imgs/id.png').default} alt="user_icon"/>
 
-                        <input id="first-name-txt" type="text" placeholder="First Name" />
-                        <input id="last-name-txt" type="text" placeholder="Last Name" />
-                        <input id="id-num-txt" type="text" placeholder="ID Number" />
+                        <button 
+                            onClick={() => this.handleBrwRtrnClick("Return_btn_styles")} 
+                            style={this.state.Borrow_btn_styles}
+                            id="borrow-btn">
+                            Borrow
+                        </button>
+                        <button 
+                            onClick={() => this.handleBrwRtrnClick("Borrow_btn_styles")} 
+                            style={this.state.Return_btn_styles}
+                            id="return-btn">
+                            Return
+                        </button>
+
+                        <form>
+                            <input id="first-name-txt" type="text" placeholder="First Name" autoComplete="off" required />
+                            <input id="last-name-txt" type="text" placeholder="Last Name" autoComplete="off" required />
+                            <input id="id-num-txt" type="text" placeholder="ID Number" autoComplete="off" required />
+
+                            <button style={this.state.logIn_btn_styles} onClick={this.handleLogInClick} id="login-btn"> <span>LOG IN</span> </button>
+                        </form>
+
                     </div>
                 </div>
 

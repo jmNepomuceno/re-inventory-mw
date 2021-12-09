@@ -138,10 +138,6 @@ body{
     cursor: pointer;
 }
 
-.main_index .card .content button:focus{
-    color:red;
-}
-
 .main_index .card .back-content{
     position:absolute;
     padding: 20px;
@@ -161,7 +157,7 @@ body{
     height:50px;
 }
 
-.main_index .card .back-content button{
+.main_index .card .back-content #back-btn{
     position: absolute;
     top:3%;
     left:4%;
@@ -256,6 +252,96 @@ body{
     top: 55.5%;
 }
 
+.main_index .card .back-content #borrow-btn,
+.main_index .card .back-content #return-btn{
+    position: absolute;
+    bottom:17%;
+    width:22%;
+    height:12%;
+    border-radius: 5px;
+    border: none;
+    font-family: Consolas, sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.main_index .card .back-content #borrow-btn{
+    left:5%;
+    background: #3385ff;
+}
+
+.main_index .card .back-content #return-btn{
+    right:5%;
+    background: #ff5050;
+}
+
+.main_index .card .back-content #login-btn{
+    position:absolute;
+    bottom:0;
+    left:25%;
+    width:40%;
+    height:15%;
+    margin:1em;
+    padding:0.3em;
+    background: linear-gradient(to right, #56ccf2, #2f88ed);
+    border:0;
+    cursor: pointer;
+    border-radius: 20px;
+    /* pointer-events: none; */
+    opacity:0.2;
+}
+
+.main_index .card .back-content #login-btn:before,
+.main_index .card .back-content #login-btn:after{
+    content:'';
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background: linear-gradient(to right, #56ccf2, #2f88ed);
+    border-radius: 20px;
+    transition: all 5s ease-in-out;
+}
+
+.main_index .card .back-content #login-btn:hover::before{
+    filter:blur(5px);
+}
+
+.main_index .card .back-content #login-btn:hover::after{
+    filter:blur(15px);
+}
+
+.main_index .card .back-content #login-btn:hover{
+    animation: hue 3s linear infinite
+}
+
+@keyframes hue{
+    0%{
+      filter:hue-rotate(0deg);
+    }
+    100%{
+      filter:hue-rotate(360deg);
+    }
+}
+
+.main_index .card .back-content #login-btn span{
+    position:relative;
+    z-index: 3;
+    display:block;
+    padding:0.6em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color:#fff;
+    text-transform: uppercase;
+    background-color:#2c2e36;
+    border-radius: 17px;
+}
+
+.main_index .card .back-content #login-btn:focus{
+    outline: none;
+}
 
 /* .main_index .card .content-1{
     left: -100%;
