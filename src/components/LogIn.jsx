@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 class LogIn extends React.Component {
 
@@ -141,7 +142,9 @@ class LogIn extends React.Component {
                             <input id="last-name-txt" type="text" placeholder="Last Name" autoComplete="off" required />
                             <input id="id-num-txt" type="text" placeholder="ID Number" autoComplete="off" required />
 
-                            <button style={this.state.logIn_btn_styles} onClick={this.handleLogInClick} id="login-btn"> <span>LOG IN</span> </button>
+                            <Link to="/about">
+                                <button style={this.state.logIn_btn_styles} onClick={this.handleLogInClick} id="login-btn"> <span>LOG IN</span> </button>
+                            </Link>
                         </form>
                     </div>
                 </div>
@@ -169,9 +172,8 @@ class LogIn extends React.Component {
                             <input id="username-txt" type="text" placeholder="Username" autoComplete="off" required />
                             <input id="password-txt" type="text" placeholder="Password" autoComplete="off" required />
 
-                            <button id="login-btn"> <span>LOG IN</span> </button>
+                            <Link to="/about"><button id="login-btn"> <span>LOG IN</span> </button></Link>
                         </form>
-
                     </div>
                 </div>
 
@@ -213,7 +215,9 @@ class LogIn extends React.Component {
                             <input id="last-name-txt" type="text" placeholder="Last Name" autoComplete="off" required />
                             <input id="id-num-txt" type="text" placeholder="ID Number" autoComplete="off" required />
 
-                            <button style={this.state.logIn_btn_styles} onClick={this.handleLogInClick} id="login-btn"> <span>LOG IN</span> </button>
+                            <Link to="/about">
+                                <button style={this.state.logIn_btn_styles} onClick={this.handleLogInClick} id="login-btn"> <span>LOG IN</span> </button>
+                            </Link>
                         </form>
 
                     </div>
