@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/re-inventory-mw/static/css/main.ba350278.chunk.css",
-    "main.js": "/re-inventory-mw/static/js/main.c0344efb.chunk.js",
-    "main.js.map": "/re-inventory-mw/static/js/main.c0344efb.chunk.js.map",
+    "main.js": "/re-inventory-mw/static/js/main.1824339c.chunk.js",
+    "main.js.map": "/re-inventory-mw/static/js/main.1824339c.chunk.js.map",
     "runtime-main.js": "/re-inventory-mw/static/js/runtime-main.c51dca52.js",
     "runtime-main.js.map": "/re-inventory-mw/static/js/runtime-main.c51dca52.js.map",
-    "static/js/2.555d5369.chunk.js": "/re-inventory-mw/static/js/2.555d5369.chunk.js",
-    "static/js/2.555d5369.chunk.js.map": "/re-inventory-mw/static/js/2.555d5369.chunk.js.map",
+    "static/js/2.67e3ee6b.chunk.js": "/re-inventory-mw/static/js/2.67e3ee6b.chunk.js",
+    "static/js/2.67e3ee6b.chunk.js.map": "/re-inventory-mw/static/js/2.67e3ee6b.chunk.js.map",
     "index.html": "/re-inventory-mw/index.html",
     "static/css/main.ba350278.chunk.css.map": "/re-inventory-mw/static/css/main.ba350278.chunk.css.map",
-    "static/js/2.555d5369.chunk.js.LICENSE.txt": "/re-inventory-mw/static/js/2.555d5369.chunk.js.LICENSE.txt",
+    "static/js/2.67e3ee6b.chunk.js.LICENSE.txt": "/re-inventory-mw/static/js/2.67e3ee6b.chunk.js.LICENSE.txt",
     "static/media/bpsuLogo.png": "/re-inventory-mw/static/media/bpsuLogo.bbe84ba6.png",
     "static/media/collegeStudents.jpg": "/re-inventory-mw/static/media/collegeStudents.5e6dcd89.jpg",
     "static/media/id.png": "/re-inventory-mw/static/media/id.8a6654c6.png",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c51dca52.js",
-    "static/js/2.555d5369.chunk.js",
+    "static/js/2.67e3ee6b.chunk.js",
     "static/css/main.ba350278.chunk.css",
-    "static/js/main.c0344efb.chunk.js"
+    "static/js/main.1824339c.chunk.js"
   ]
 }
