@@ -17,7 +17,7 @@ class App extends React.Component {
 
     render(){
         return(
-            <Router basename=''>
+            <Router basename='re-inventory-mw'>
                 <React.Fragment>
                     <Routes>
                         <Route path="/" exact element={
