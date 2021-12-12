@@ -12,7 +12,7 @@ class Inventory extends React.Component {
 
         this.state = {
             inventory_aside_style : {
-                display : (window_width <= 420) ? "none" : "block"
+                display : (window_width <= 770) ? "none" : "block"
             }
         }
 
@@ -32,11 +32,11 @@ class Inventory extends React.Component {
         const {window_width} = this.props
 
         const display_menu_btn_style = {
-            display : (window_width <= 420) ? "block" : "none"
+            display : (window_width <= 770) ? "block" : "none"
         }
 
         // console.log(display_menu_btn_style.display)
-        console.log(this.state.inventory_aside_style)
+        // console.log(this.state.inventory_aside_style)
         return(
             <div className="inventory_div">
      

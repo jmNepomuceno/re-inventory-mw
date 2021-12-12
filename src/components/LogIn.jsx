@@ -100,7 +100,7 @@ class LogIn extends React.Component {
     }
 
     render(){
-        console.log(this.state)
+        //console.log(this.state)
         return(
             <main className="main_index">
 
@@ -142,7 +142,7 @@ class LogIn extends React.Component {
                             <input id="last-name-txt" type="text" placeholder="Last Name" autoComplete="off" required />
                             <input id="id-num-txt" type="text" placeholder="ID Number" autoComplete="off" required />
 
-                            <Link to="/about">
+                            <Link to="/inventory">
                                 <button style={this.state.logIn_btn_styles} onClick={this.handleLogInClick} id="login-btn"> <span>LOG IN</span> </button>
                             </Link>
                         </form>
