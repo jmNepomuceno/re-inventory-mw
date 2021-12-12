@@ -347,6 +347,87 @@ body{
     left: -100%;
 } */
 
+/* INVENTORY JSX */
+
+.inventory_div{
+    width:100%;
+    height:100vh;
+    /* border:1px solid black; */
+    display:flex;
+}
+
+
+.inventory_header{
+    width:83%;
+    height: 7vh;
+    /* border:1px solid black; */
+    background: #306897;
+}
+
+.inventory_aside{
+    width:17%;
+    height:99.8vh;
+    /* border:1px solid black; */
+    background: #646464;
+}
+
+.inventory_aside .invetory_aside_miniHeader{
+    width:100%;
+    height:7vh;
+    background: #255074;
+}
+
+.inventory_aside .invetory_aside_miniHeader h1{
+    color: whitesmoke;
+    font-size: 1.7rem;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    line-height:50px;
+}
+
+/* ASIDE COMPONENTS JSX */
+
+.aside-div{
+    position: relative;
+    width:90%;
+    left:4%;
+    height:50px;
+    cursor: pointer;
+    border-bottom:1px solid #333333;
+}
+
+.aside-div label{
+    position:absolute;
+    width:90%;
+    right:-5%;
+    height:100%;
+    text-align: center;
+    line-height: 50px;
+    /* letter-spacing: 1px; */
+    color: #d9d9d9;
+    font-family: Consolas, sans-serif;
+    font-size: 1.2rem;
+    
+}
+
+.aside-div img{
+    position:absolute;
+    top:20%;
+    left:2%;
+    width:15%;
+    height:65%;
+}
+
+.mobile_menu_btn{
+    width:10%;
+    height:90%;
+    margin:3px 0 0 2px;
+    background: url('./imgs/inventory_imgs/menu.png');
+    background-size:100% 100%;
+    background-position: center;
+    border:none;
+    background-color:#1f4361;
+}
 
 
 /* medias */
@@ -386,5 +467,13 @@ desktop: 1200px; */
 
     .main_index{
         height:150vh;
+    }
+
+    /* INVENTORY JSX */
+    .inventory_header{
+        width:100%;
+    }
+    .inventory_aside{
+        display: none;
     }
 }
