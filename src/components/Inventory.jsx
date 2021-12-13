@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 // Components
 import AsideComponents from './AsideComponents'
@@ -13,6 +14,9 @@ class Inventory extends React.Component {
         this.state = {
             inventory_aside_style : {
                 display : (window_width <= 770) ? "none" : "block"
+            },
+            confirmation_log_out_style : {
+                display : "none"
             }
         }
 
@@ -24,6 +28,16 @@ class Inventory extends React.Component {
             inventory_aside_style : {
                 ...prevState.inventory_aside_style,
                 display: (this.state.inventory_aside_style.display === "block") ? "none" : "block"
+            }
+        }))
+    }
+
+    handleLogOut = () =>{
+        this.setState(prevState =>({
+            ...prevState,
+            confirmation_log_out_style : {
+                ...prevState.confirmation_log_out_style,
+                display: (this.state.confirmation_log_out_style.display === "block") ? "none" : "block"
             }
         }))
     }
@@ -66,6 +80,16 @@ class Inventory extends React.Component {
                         onClick={this.handleMenuBtnClick}>
                         
                     </button>
+
+                    <label onClick={this.handleLogOut}>Log out</label>
+
+                    <div style={this.state.confirmation_log_out_style} className="confirmation_log_out_div">
+                        <label>Are you sure you want to log out?</label>
+                        <Link to="/">
+                            <button id="logout_yes_btn">Yes</button>
+                        </Link>
+                        <button onClick={this.handleLogOut} id="logout_no_btn">No</button>
+                    </div>
                 </header>
                 
             </div>

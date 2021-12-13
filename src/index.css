@@ -364,6 +364,63 @@ body{
     background: #306897;
 }
 
+.inventory_header label{
+    position: absolute;
+    top:30%;
+    right:2%;
+    border:none;
+    color:whitesmoke;
+    background: transparent;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:0.8rem;
+    letter-spacing: 2px;
+}
+
+.inventory_header .confirmation_log_out_div{
+    position: absolute;
+    top:70%;
+    right:0;
+    width:17%;
+    height:100px;
+    border:3px solid #a6a6a6;
+    border-radius: 5px;
+    background: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    /* display:none; */
+    z-index: 1;
+}
+
+.inventory_header .confirmation_log_out_div label{
+    position: absolute;
+    top:10%;
+    width:90%;
+    text-align: center;
+    color: black;
+}
+
+
+.inventory_header .confirmation_log_out_div #logout_yes_btn,
+.inventory_header .confirmation_log_out_div #logout_no_btn{
+    position:absolute;
+    top:50%;
+    margin:5px 20px;
+    width:50px;
+    height:30px;
+    border-radius: 5px;
+    cursor: pointer;
+}   
+
+.inventory_header .confirmation_log_out_div #logout_yes_btn{
+    border:1px solid green;
+    left:5%;
+}
+
+.inventory_header .confirmation_log_out_div #logout_no_btn{
+    border:1px solid red;
+    left:45%;
+}
+
 .inventory_aside{
     width:17%;
     height:99.8vh;
