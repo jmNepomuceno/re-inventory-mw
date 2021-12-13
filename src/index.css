@@ -440,11 +440,14 @@ laptop: 992px;
 desktop: 1200px; */
 
 @media (max-width: 768px){ /* tablet */
+    .header_index{
+        height:70vh;
+    }
+
     .header_index h1{
         left:20%;
-        font-size: 2.5rem;
+        font-size: 2rem;
         line-height:60px;
-
     }
 
     .header_index img{
@@ -452,7 +455,7 @@ desktop: 1200px; */
     }
 
     .main_index{
-        height:150vh;
+        height:250vh;
     }
 
     /* INVENTORY JSX */
@@ -478,7 +481,7 @@ desktop: 1200px; */
 @media (max-width: 576px){ /* Mobile */
     .header_index h1{
         top:20%;
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         line-height:70px;
     }
 
