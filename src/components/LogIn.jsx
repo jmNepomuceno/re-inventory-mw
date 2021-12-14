@@ -44,7 +44,8 @@ class LogIn extends React.Component {
             },
             Return_btn_styles : {
                 opacity : "1"
-            }
+            },
+            visitor_name : ""
         }
     }
 
@@ -94,13 +95,14 @@ class LogIn extends React.Component {
         })
     }
 
-    handleLogInClick = () =>{
-        // (this.state.valid_to_login) && console.log("Kyla")
-        console.log("kyla")
+    handleSetVisitorName = (event) =>{
+        this.setState({
+            visitor_name : event.target.value
+        })
     }
 
     render(){
-        //console.log(this.state)
+        //console.log(this.state.visitor_name)
         return(
             <main className="main_index">
 
@@ -138,12 +140,17 @@ class LogIn extends React.Component {
                         </button>
 
                         <form>
-                            <input id="first-name-txt" type="text" placeholder="First Name" autoComplete="off" required />
+                            <input id="first-name-txt" onChange={this.handleSetVisitorName} type="text" placeholder="First Name" autoComplete="off" required />
                             <input id="last-name-txt" type="text" placeholder="Last Name" autoComplete="off" required />
                             <input id="id-num-txt" type="text" placeholder="ID Number" autoComplete="off" required />
 
                             <Link to="/inventory">
-                                <button style={this.state.logIn_btn_styles} onClick={this.handleLogInClick} id="login-btn"> <span>LOG IN</span> </button>
+                                <button 
+                                    style={this.state.logIn_btn_styles}  
+                                    id="login-btn"
+                                    onClick={() => this.props.args.onSetVisitor(this.state.visitor_name)}> 
+                                    <span>LOG IN</span>     
+                                </button>
                             </Link>
                         </form>
                     </div>
@@ -168,11 +175,17 @@ class LogIn extends React.Component {
                         <img id="username-img" src={require('../imgs/index_imgs/user.png').default} alt="user_icon"/>
                         <img id="password-img" src={require('../imgs/index_imgs/password.png').default} alt="user_icon"/>
 
-                        <form> 
-                            <input id="username-txt" type="text" placeholder="Username" autoComplete="off" required />
+                        <form > 
+                            <input id="username-txt" onChange={this.handleSetVisitorName} type="text" placeholder="Username" autoComplete="off" required />
                             <input id="password-txt" type="text" placeholder="Password" autoComplete="off" required />
 
-                            <Link to="/about"><button id="login-btn"> <span>LOG IN</span> </button></Link>
+                            <Link to="/inventory">
+                                <button 
+                                    id="login-btn"
+                                    onClick={() => this.props.args.onSetVisitor(this.state.visitor_name)}> 
+                                    <span>LOG IN</span>     
+                                </button>
+                            </Link>
                         </form>
                     </div>
                 </div>
@@ -211,12 +224,17 @@ class LogIn extends React.Component {
                         </button>
 
                         <form>
-                            <input id="first-name-txt" type="text" placeholder="First Name" autoComplete="off" required />
+                            <input id="first-name-txt" onChange={this.handleSetVisitorName} type="text" placeholder="First Name" autoComplete="off" required />
                             <input id="last-name-txt" type="text" placeholder="Last Name" autoComplete="off" required />
                             <input id="id-num-txt" type="text" placeholder="ID Number" autoComplete="off" required />
 
-                            <Link to="/about">
-                                <button style={this.state.logIn_btn_styles} onClick={this.handleLogInClick} id="login-btn"> <span>LOG IN</span> </button>
+                            <Link to="/inventory">
+                                <button 
+                                    style={this.state.logIn_btn_styles}  
+                                    id="login-btn"
+                                    onClick={() => this.props.args.onSetVisitor(this.state.visitor_name)}> 
+                                    <span>LOG IN</span>     
+                                </button>
                             </Link>
                         </form>
 

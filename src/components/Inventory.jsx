@@ -58,7 +58,7 @@ class Inventory extends React.Component {
                 <aside style={this.state.inventory_aside_style}  className="inventory_aside">
 
                     <div className="invetory_aside_miniHeader">
-                        <h1>Kyla</h1>
+                        <h1> {this.props.args.visitor_name} </h1>
                     </div>
 
                     <AsideComponents 

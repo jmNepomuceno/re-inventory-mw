@@ -565,6 +565,10 @@ desktop: 1200px; */
         height:12vh;
     }
 
+    .inventory_header .confirmation_log_out_div{
+        width:25%;
+    }
+
     /* ITEM COMPONENTS JSX */
     .inventory_main{
         top:13vh;
@@ -605,6 +609,10 @@ desktop: 1200px; */
 
     .inventory_aside .invetory_aside_miniHeader{
         height:7vh;
+    }
+
+    .inventory_header .confirmation_log_out_div{
+        width:45%;
     }
 
     /* ITEM COMPONENTS JSX */

@@ -11,11 +11,17 @@ class App extends React.Component {
     constructor(){
         super()
         this.state = {
-            window_width : window.innerWidth
+            window_width : window.innerWidth,
+            visitor_name : ""
         }
     }
 
+    handleSetVisitor = (value) => {
+        this.setState({visitor_name : value})
+    }
+
     render(){
+        console.log(this.state.visitor_name)
         return(
             <Router basename='re-inventory-mw'>
                 <React.Fragment>
@@ -23,11 +29,24 @@ class App extends React.Component {
                         <Route path="/" exact element={
                             <React.Fragment>
                                 <Header/>
-                                <LogIn />
+                                <LogIn 
+                                    args={
+                                        {
+                                            onSetVisitor : this.handleSetVisitor
+                                        }
+                                    }
+                                />
                             </React.Fragment>
                         } />
                         <Route path="/inventory" exact element={
-                            <Inventory window_width={this.state.window_width}/>
+                            <Inventory 
+                                window_width={this.state.window_width}
+                                args={
+                                    {
+                                        visitor_name : this.state.visitor_name
+                                    }
+                                }
+                            />
                         }/>
     
                     </Routes>
