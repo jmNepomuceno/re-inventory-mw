@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 
 // Components
 import AsideComponents from './AsideComponents'
+import ItemComponents from './ItemComponents'
 
 class Inventory extends React.Component {
 
@@ -48,9 +49,9 @@ class Inventory extends React.Component {
         const display_menu_btn_style = {
             display : (window_width <= 770) ? "block" : "none"
         }
+        const arr = [1 , 2 , 3]        
+        const itemComponentsRow = arr.map(elem => <ItemComponents key={elem} args={elem} />) 
 
-        // console.log(display_menu_btn_style.display)
-        // console.log(this.state.inventory_aside_style)
         return(
             <div className="inventory_div">
      
@@ -91,6 +92,13 @@ class Inventory extends React.Component {
                         <button onClick={this.handleLogOut} id="logout_no_btn">No</button>
                     </div>
                 </header>
+
+                <main className="inventory_main">
+
+                    {itemComponentsRow}
+                    {itemComponentsRow}
+                    
+                </main>
                 
             </div>
         )
