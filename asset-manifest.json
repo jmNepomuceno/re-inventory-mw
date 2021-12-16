@@ -1,29 +1,31 @@
 {
   "files": {
-    "main.css": "/re-inventory-mw/static/css/main.987fa91c.chunk.css",
-    "main.js": "/re-inventory-mw/static/js/main.ed71e1f1.chunk.js",
-    "main.js.map": "/re-inventory-mw/static/js/main.ed71e1f1.chunk.js.map",
+    "main.css": "/re-inventory-mw/static/css/main.f6886984.chunk.css",
+    "main.js": "/re-inventory-mw/static/js/main.70e07f1e.chunk.js",
+    "main.js.map": "/re-inventory-mw/static/js/main.70e07f1e.chunk.js.map",
     "runtime-main.js": "/re-inventory-mw/static/js/runtime-main.c51dca52.js",
     "runtime-main.js.map": "/re-inventory-mw/static/js/runtime-main.c51dca52.js.map",
-    "static/js/2.f7c3a88b.chunk.js": "/re-inventory-mw/static/js/2.f7c3a88b.chunk.js",
-    "static/js/2.f7c3a88b.chunk.js.map": "/re-inventory-mw/static/js/2.f7c3a88b.chunk.js.map",
+    "static/js/2.bd7ff67f.chunk.js": "/re-inventory-mw/static/js/2.bd7ff67f.chunk.js",
+    "static/js/2.bd7ff67f.chunk.js.map": "/re-inventory-mw/static/js/2.bd7ff67f.chunk.js.map",
     "index.html": "/re-inventory-mw/index.html",
-    "static/css/main.987fa91c.chunk.css.map": "/re-inventory-mw/static/css/main.987fa91c.chunk.css.map",
-    "static/js/2.f7c3a88b.chunk.js.LICENSE.txt": "/re-inventory-mw/static/js/2.f7c3a88b.chunk.js.LICENSE.txt",
+    "static/css/main.f6886984.chunk.css.map": "/re-inventory-mw/static/css/main.f6886984.chunk.css.map",
+    "static/js/2.bd7ff67f.chunk.js.LICENSE.txt": "/re-inventory-mw/static/js/2.bd7ff67f.chunk.js.LICENSE.txt",
     "static/media/book.png": "/re-inventory-mw/static/media/book.0427074c.png",
     "static/media/bpsuLogo.png": "/re-inventory-mw/static/media/bpsuLogo.bbe84ba6.png",
+    "static/media/clean.png": "/re-inventory-mw/static/media/clean.94fcf58f.png",
     "static/media/collegeStudents.jpg": "/re-inventory-mw/static/media/collegeStudents.5e6dcd89.jpg",
     "static/media/id.png": "/re-inventory-mw/static/media/id.8a6654c6.png",
     "static/media/inventory.png": "/re-inventory-mw/static/media/inventory.7ebe056f.png",
     "static/media/index.css": "/re-inventory-mw/static/media/inventoryBg.8978431e.png",
     "static/media/login.png": "/re-inventory-mw/static/media/login.11b07457.png",
+    "static/media/projector.png": "/re-inventory-mw/static/media/projector.8b13a034.png",
     "static/media/shop.png": "/re-inventory-mw/static/media/shop.34d60ee4.png",
     "static/media/user.png": "/re-inventory-mw/static/media/user.05d0404a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c51dca52.js",
-    "static/js/2.f7c3a88b.chunk.js",
-    "static/css/main.987fa91c.chunk.css",
-    "static/js/main.ed71e1f1.chunk.js"
+    "static/js/2.bd7ff67f.chunk.js",
+    "static/css/main.f6886984.chunk.css",
+    "static/js/main.70e07f1e.chunk.js"
   ]
 }
