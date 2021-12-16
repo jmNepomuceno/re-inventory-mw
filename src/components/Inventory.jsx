@@ -5,6 +5,9 @@ import {Link} from 'react-router-dom'
 import AsideComponents from './AsideComponents'
 import ItemComponents from './ItemComponents'
 
+// databases
+import itemDB from '../database/itemDB'
+
 class Inventory extends React.Component {
 
     constructor(props){

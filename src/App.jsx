@@ -12,16 +12,34 @@ class App extends React.Component {
         super()
         this.state = {
             window_width : window.innerWidth,
-            visitor_name : ""
+            visitors_info : {
+                first_name : "",
+                last_name : "",
+                id_num : 0,
+                admin_name : "",
+                admin_password : ""
+            }
         }
     }
 
     handleSetVisitor = (value) => {
-        this.setState({visitor_name : value})
+        // this.setState({visitor_name : value})
+        console.log(value)
+        this.setState(prevState =>({
+            ...prevState,
+            visitors_info : {
+                ...prevState.visitors_info,
+                first_name : value.first_name,
+                last_name : value.last_name,
+                id_num : value.id_num,
+                admin_name : value.admin_name,
+                admin_password : value.admin_password
+            }
+        }))
     }
 
     render(){
-        console.log(this.state.visitor_name)
+        //console.log(this.state.visitors_info)
         return(
             <Router basename='re-inventory-mw'>
                 <React.Fragment>
@@ -43,7 +61,9 @@ class App extends React.Component {
                                 window_width={this.state.window_width}
                                 args={
                                     {
-                                        visitor_name : this.state.visitor_name
+                                        visitor_name : (this.state.visitors_info.first_name !== "") ?  
+                                            this.state.visitors_info.first_name :
+                                            this.state.visitors_info.admin_name
                                     }
                                 }
                             />

@@ -45,7 +45,14 @@ class LogIn extends React.Component {
             Return_btn_styles : {
                 opacity : "1"
             },
-            visitor_name : ""
+            visitor_name : "",
+            visitors_info : {
+                first_name : "",
+                last_name : "",
+                id_num : 0,
+                admin_name : "",
+                admin_password : "",
+            }
         }
     }
 
@@ -96,13 +103,21 @@ class LogIn extends React.Component {
     }
 
     handleSetVisitorName = (event) =>{
-        this.setState({
-            visitor_name : event.target.value
-        })
+        const {name, value} = event.target
+
+        // console.log(name , value)
+
+        this.setState(prevState =>({
+            ...prevState,
+            visitors_info : {
+                ...prevState.visitors_info,
+                [name] : value
+            }
+        }))
     }
 
     render(){
-        //console.log(this.state.visitor_name)
+        //console.log(this.state.visitors_info)
         return(
             <main className="main_index">
 
@@ -140,15 +155,40 @@ class LogIn extends React.Component {
                         </button>
 
                         <form>
-                            <input id="first-name-txt" onChange={this.handleSetVisitorName} type="text" placeholder="First Name" autoComplete="off" required />
-                            <input id="last-name-txt" type="text" placeholder="Last Name" autoComplete="off" required />
-                            <input id="id-num-txt" type="text" placeholder="ID Number" autoComplete="off" required />
+                            <input 
+                                id="first-name-txt" 
+                                name="first_name"
+                                onChange={this.handleSetVisitorName} 
+                                type="text" 
+                                placeholder="First Name" 
+                                autoComplete="off" 
+                                required 
+                            />
+                            
+                            <input 
+                                id="last-name-txt" 
+                                name="last_name"
+                                onChange={this.handleSetVisitorName} 
+                                type="text" 
+                                placeholder="Last Name" 
+                                autoComplete="off" 
+                                required 
+                            />
+                            <input 
+                                id="id-num-txt" 
+                                name="id_num"
+                                onChange={this.handleSetVisitorName} 
+                                type="text" 
+                                placeholder="ID Number" 
+                                autoComplete="off" 
+                                required 
+                            />
 
                             <Link to="/inventory">
                                 <button 
                                     style={this.state.logIn_btn_styles}  
                                     id="login-btn"
-                                    onClick={() => this.props.args.onSetVisitor(this.state.visitor_name)}> 
+                                    onClick={() => this.props.args.onSetVisitor(this.state.visitors_info)}> 
                                     <span>LOG IN</span>     
                                 </button>
                             </Link>
@@ -176,13 +216,28 @@ class LogIn extends React.Component {
                         <img id="password-img" src={require('../imgs/index_imgs/password.png').default} alt="user_icon"/>
 
                         <form > 
-                            <input id="username-txt" onChange={this.handleSetVisitorName} type="text" placeholder="Username" autoComplete="off" required />
-                            <input id="password-txt" type="text" placeholder="Password" autoComplete="off" required />
+                            <input 
+                                id="username-txt" 
+                                name="admin_name"
+                                onChange={this.handleSetVisitorName} 
+                                type="text" placeholder="Username" 
+                                autoComplete="off" 
+                                required 
+                            />
+                            <input 
+                                id="password-txt" 
+                                name="admin_password"
+                                onChange={this.handleSetVisitorName} 
+                                type="text" 
+                                placeholder="Password" 
+                                autoComplete="off" 
+                                required 
+                            />
 
                             <Link to="/inventory">
                                 <button 
                                     id="login-btn"
-                                    onClick={() => this.props.args.onSetVisitor(this.state.visitor_name)}> 
+                                    onClick={() => this.props.args.onSetVisitor(this.state.visitors_info)}> 
                                     <span>LOG IN</span>     
                                 </button>
                             </Link>
@@ -224,15 +279,39 @@ class LogIn extends React.Component {
                         </button>
 
                         <form>
-                            <input id="first-name-txt" onChange={this.handleSetVisitorName} type="text" placeholder="First Name" autoComplete="off" required />
-                            <input id="last-name-txt" type="text" placeholder="Last Name" autoComplete="off" required />
-                            <input id="id-num-txt" type="text" placeholder="ID Number" autoComplete="off" required />
+                            <input 
+                                id="first-name-txt" 
+                                name="first_name"
+                                onChange={this.handleSetVisitorName} 
+                                type="text" 
+                                placeholder="First Name" 
+                                autoComplete="off" 
+                                required 
+                            />
+                            <input 
+                                id="last-name-txt" 
+                                name="last_name"
+                                onChange={this.handleSetVisitorName} 
+                                type="text" 
+                                placeholder="Last Name" 
+                                autoComplete="off" 
+                                required 
+                            />
+                            <input 
+                                id="id-num-txt" 
+                                name="id_num"
+                                onChange={this.handleSetVisitorName} 
+                                type="text" 
+                                placeholder="ID Number" 
+                                autoComplete="off" 
+                                required 
+                            />
 
                             <Link to="/inventory">
                                 <button 
                                     style={this.state.logIn_btn_styles}  
                                     id="login-btn"
-                                    onClick={() => this.props.args.onSetVisitor(this.state.visitor_name)}> 
+                                    onClick={() => this.props.args.onSetVisitor(this.state.visitors_info)}> 
                                     <span>LOG IN</span>     
                                 </button>
                             </Link>

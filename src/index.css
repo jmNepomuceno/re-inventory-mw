@@ -519,6 +519,35 @@ body{
     border-radius: 5px;
 }
 
+.item_div h1{
+    position:absolute;
+    top:5%;
+    left:5%;
+    font-size:2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#1a1a1a;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.item_div label{
+    position:absolute;
+    top:38%;
+    left:5%;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#1a1a1a;
+    font-size:1rem;
+    letter-spacing: 1px;
+}
+
+.item_div img{
+    position:absolute;
+    top:15%;
+    right:5%;
+    width:30%;
+    height:50%;
+}
+
 
 /* medias */
 
