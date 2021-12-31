@@ -6,8 +6,11 @@ import Header from './components/Header'
 import LogIn from './components/LogIn'
 import Inventory from './components/Inventory'
 
-class App extends React.Component {
+// databases
+import itemDB from './database/itemDB'
 
+
+class App extends React.Component {
     constructor(){
         super()
         this.state = {
@@ -18,8 +21,20 @@ class App extends React.Component {
                 id_num : 0,
                 admin_name : "",
                 admin_password : ""
-            }
+            },
+            inventory:[
+
+            ]
         }
+
+        this.limitPcs = itemDB.map(elem => elem.pcs)
+    }
+
+    componentDidMount(){
+        this.setState({
+            inventory : this.state.inventory.concat(itemDB)
+        })
+        
     }
 
     handleSetVisitor = (value) => {
@@ -38,8 +53,28 @@ class App extends React.Component {
         }))
     }
 
+    handleIncrementPcs = (id) =>{
+        if(this.state.inventory[id - 1].pcs < this.limitPcs[id - 1]){
+            this.setState(prevState => ({
+                inventory: prevState.inventory.map(
+                    obj => (obj.id === id ? Object.assign(obj, { pcs: this.state.inventory[id - 1].pcs + 1 }) : obj)
+                )
+            }))
+        }
+        
+    }
+
+    handleDecrementPcs = (id) =>{
+        if(this.state.inventory[id - 1].pcs > 0)
+        this.setState(prevState => ({
+            inventory: prevState.inventory.map(
+                obj => (obj.id === id ? Object.assign(obj, { pcs: this.state.inventory[id - 1].pcs - 1 }) : obj)
+            )
+        }))
+    }
+
     render(){
-        //console.log(this.state.visitors_info)
+        //console.log(this.limitPcs)
         return(
             <Router basename='re-inventory-mw'>
                 <React.Fragment>
@@ -63,7 +98,10 @@ class App extends React.Component {
                                     {
                                         visitor_name : (this.state.visitors_info.first_name !== "") ?  
                                             this.state.visitors_info.first_name :
-                                            this.state.visitors_info.admin_name
+                                            this.state.visitors_info.admin_name,
+                                        itemDB : this.state.inventory,
+                                        onIncrementPcs : this.handleIncrementPcs,
+                                        onDecrementPcs : this.handleDecrementPcs
                                     }
                                 }
                             />

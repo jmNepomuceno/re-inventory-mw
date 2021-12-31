@@ -6,7 +6,7 @@ import AsideComponents from './AsideComponents'
 import ItemComponents from './ItemComponents'
 
 // databases
-import itemDB from '../database/itemDB'
+// import itemDB from '../database/itemDB'
 
 class Inventory extends React.Component {
 
@@ -53,8 +53,20 @@ class Inventory extends React.Component {
             display : (window_width <= 770) ? "block" : "none"
         }
         // const arr = [1 , 2 , 3]      
-        console.log(itemDB.length)  
-        const itemComponentsRow = itemDB.map(elem => <ItemComponents key={elem.id} args={elem} />) 
+        //console.log(itemDB.length)  
+
+        const itemComponentsRow = this.props.args.itemDB.map(elem => { 
+            return(
+                <ItemComponents 
+                    key={elem.id} 
+                    args={{
+                        elem : elem,
+                        onIncrementPcs : this.props.args.onIncrementPcs,
+                        onDecrementPcs : this.props.args.onDecrementPcs
+                    }} 
+                />    
+            )
+        }) 
 
         return(
             <div className="inventory_div">
