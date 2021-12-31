@@ -65,12 +65,13 @@ class App extends React.Component {
     }
 
     handleDecrementPcs = (id) =>{
-        if(this.state.inventory[id - 1].pcs > 0)
-        this.setState(prevState => ({
-            inventory: prevState.inventory.map(
-                obj => (obj.id === id ? Object.assign(obj, { pcs: this.state.inventory[id - 1].pcs - 1 }) : obj)
-            )
-        }))
+        if(this.state.inventory[id - 1].pcs > 0){
+            this.setState(prevState => ({
+                inventory: prevState.inventory.map(
+                    obj => (obj.id === id ? Object.assign(obj, { pcs: this.state.inventory[id - 1].pcs - 1 }) : obj)
+                )
+            }))
+        }
     }
 
     render(){
