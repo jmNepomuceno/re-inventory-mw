@@ -54,7 +54,7 @@ class Inventory extends React.Component {
             display : (window_width <= 770) ? "block" : "none"
         }
         
-        console.log(this.props.args.sideBarStyle)
+        //console.log(this.props.args.sideBarStyle)
 
         const itemComponentsRow = this.props.args.itemDB.map(elem => { 
             return(
@@ -118,10 +118,17 @@ class Inventory extends React.Component {
 
                 <main className="inventory_main_inventory" style={this.props.args.sideBarStyle[0]}>
                     {itemComponentsRow}
+                    <div className="inventory_information_outer_div">
+        
+                    </div>
                 </main>
                 
                 <main className="inventory_main_borrow_receipts" style={this.props.args.sideBarStyle[1]}>
-                    <BorrowReceipts/>
+                    <BorrowReceipts 
+                        args={{
+                            is_borrowed : this.props.args.is_borrowed
+                        }} 
+                    />
                 </main>
             </div>
         )

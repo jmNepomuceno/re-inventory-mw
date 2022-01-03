@@ -502,6 +502,15 @@ body{
     overflow:scroll;
 }
 
+.inventory_information_outer_div{
+    position:absolute;
+    top:5%;
+    left:5%;
+    width:90%;
+    height:90%;
+    background:#f2f2f2;
+}
+
 .item_div{
     position: relative;
     display:inline-block;
@@ -621,6 +630,35 @@ body{
     letter-spacing: 1px;
 }
 
+/* BORROW RECEIPTS JSX */
+.borrow_receipt_div{
+    position:relative;
+    width:100%; 
+    height:100%;
+}
+
+.borrow_receipt_div img{
+    position: absolute;
+    width:30%;
+    height:50%;
+    top:50%;
+    left:50%;   
+    transform: translate(-50%,-50%);
+    opacity: 0.4;
+
+}
+
+.borrow_receipt_div h1{
+    position:absolute;
+    /* border:1px solid black; */
+    width:50%;
+    top:50%;
+    left:53%;  
+    transform: translate(-50%,-50%);
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0.6;
+    letter-spacing: 2px;
+}
 
 /* medias */
 
@@ -682,6 +720,17 @@ desktop: 1200px; */
         width:45%;
         margin: 20px 0 0 20px;
     }
+
+    /* BORROW RECEIPTS JSX */
+    .borrow_receipt_div img{
+        width:30%;
+    }
+
+    .borrow_receipt_div h1{
+        width:90%;
+        font-size: 1.7rem;
+        left:70%;
+    }
 }
 
 @media (max-width: 576px){ /* Mobile */
@@ -728,5 +777,16 @@ desktop: 1200px; */
     .item_div{
         width:85%;
         margin: 20px 0 0 27px;
+    }
+
+    /* BORROW RECEIPTS JSX */
+    .borrow_receipt_div img{
+        width:50%;
+    }
+
+    .borrow_receipt_div h1{
+        width:90%;
+        font-size: 1.5rem;
+        left:55%;
     }
 }

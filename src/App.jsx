@@ -34,7 +34,8 @@ class App extends React.Component {
                 {
                     display : "none"     
                 }
-            ]
+            ],
+            is_borrowed : true
         }
 
         this.limitPcs = itemDB.map(elem => elem.pcs)
@@ -108,6 +109,10 @@ class App extends React.Component {
 
             }
         })
+
+        this.setState({
+            is_borrowed : !this.state.is_borrowed
+        })
     }
 
     handleInventoryItems = () =>{
@@ -138,7 +143,7 @@ class App extends React.Component {
     }
 
     render(){
-        console.log(this.state.sideBarStyle)
+        // console.log(this.state.is_borrowed)
         return(
             <Router basename='re-inventory-mw'>
                 <React.Fragment>
@@ -170,7 +175,8 @@ class App extends React.Component {
                                         onConfirmBorrow : this.handleConfirmBorrow,
                                         onClickInventoryItems : this.handleInventoryItems,
                                         onClickBorrowReceipts : this.handleBorrowReceipts,
-                                        sideBarStyle : this.state.sideBarStyle
+                                        sideBarStyle : this.state.sideBarStyle,
+                                        is_borrowed : this.state.is_borrowed
                                     }
                                 }
                             />
