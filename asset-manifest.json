@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/re-inventory-mw/static/css/main.126be7ea.chunk.css",
-    "main.js": "/re-inventory-mw/static/js/main.395b9462.chunk.js",
-    "main.js.map": "/re-inventory-mw/static/js/main.395b9462.chunk.js.map",
+    "main.css": "/re-inventory-mw/static/css/main.e58a7971.chunk.css",
+    "main.js": "/re-inventory-mw/static/js/main.c4c9bbba.chunk.js",
+    "main.js.map": "/re-inventory-mw/static/js/main.c4c9bbba.chunk.js.map",
     "runtime-main.js": "/re-inventory-mw/static/js/runtime-main.c51dca52.js",
     "runtime-main.js.map": "/re-inventory-mw/static/js/runtime-main.c51dca52.js.map",
-    "static/js/2.8fa75447.chunk.js": "/re-inventory-mw/static/js/2.8fa75447.chunk.js",
-    "static/js/2.8fa75447.chunk.js.map": "/re-inventory-mw/static/js/2.8fa75447.chunk.js.map",
+    "static/js/2.7605ca7e.chunk.js": "/re-inventory-mw/static/js/2.7605ca7e.chunk.js",
+    "static/js/2.7605ca7e.chunk.js.map": "/re-inventory-mw/static/js/2.7605ca7e.chunk.js.map",
     "index.html": "/re-inventory-mw/index.html",
-    "static/css/main.126be7ea.chunk.css.map": "/re-inventory-mw/static/css/main.126be7ea.chunk.css.map",
-    "static/js/2.8fa75447.chunk.js.LICENSE.txt": "/re-inventory-mw/static/js/2.8fa75447.chunk.js.LICENSE.txt",
+    "static/css/main.e58a7971.chunk.css.map": "/re-inventory-mw/static/css/main.e58a7971.chunk.css.map",
+    "static/js/2.7605ca7e.chunk.js.LICENSE.txt": "/re-inventory-mw/static/js/2.7605ca7e.chunk.js.LICENSE.txt",
     "static/media/book.png": "/re-inventory-mw/static/media/book.0427074c.png",
     "static/media/bpsuLogo.png": "/re-inventory-mw/static/media/bpsuLogo.bbe84ba6.png",
     "static/media/clean.png": "/re-inventory-mw/static/media/clean.94fcf58f.png",
+    "static/media/clipboard.png": "/re-inventory-mw/static/media/clipboard.15f71da3.png",
     "static/media/collegeStudents.jpg": "/re-inventory-mw/static/media/collegeStudents.5e6dcd89.jpg",
     "static/media/id.png": "/re-inventory-mw/static/media/id.8a6654c6.png",
     "static/media/inventory.png": "/re-inventory-mw/static/media/inventory.7ebe056f.png",
@@ -24,8 +25,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c51dca52.js",
-    "static/js/2.8fa75447.chunk.js",
-    "static/css/main.126be7ea.chunk.css",
-    "static/js/main.395b9462.chunk.js"
+    "static/js/2.7605ca7e.chunk.js",
+    "static/css/main.e58a7971.chunk.css",
+    "static/js/main.c4c9bbba.chunk.js"
   ]
 }
