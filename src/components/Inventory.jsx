@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 // Components
 import AsideComponents from './AsideComponents'
 import ItemComponents from './ItemComponents'
+import BorrowReceipts from './BorrowReceipts'
 
 // databases
 // import itemDB from '../database/itemDB'
@@ -52,8 +53,8 @@ class Inventory extends React.Component {
         const display_menu_btn_style = {
             display : (window_width <= 770) ? "block" : "none"
         }
-        // const arr = [1 , 2 , 3]      
-        //console.log(itemDB.length)  
+        
+        console.log(this.props.args.sideBarStyle)
 
         const itemComponentsRow = this.props.args.itemDB.map(elem => { 
             return(
@@ -62,7 +63,9 @@ class Inventory extends React.Component {
                     args={{
                         elem : elem,
                         onIncrementPcs : this.props.args.onIncrementPcs,
-                        onDecrementPcs : this.props.args.onDecrementPcs
+                        onDecrementPcs : this.props.args.onDecrementPcs,
+                        confirm_btn_style : this.props.args.confirm_btn_style,
+                        onConfirmBorrow : this.props.args.onConfirmBorrow,
                     }} 
                 />    
             )
@@ -80,11 +83,15 @@ class Inventory extends React.Component {
                     <AsideComponents 
                         title={"Inventory Items"} 
                         imgURL={require("../imgs/inventory_imgs/shop.png").default}
+                        onClickInventoryItems = {this.props.args.onClickInventoryItems}
+                        id={0}
                     />
 
                     <AsideComponents 
                         title={"Borrow Receipts"} 
                         imgURL={require("../imgs/inventory_imgs/receipt.png").default}
+                        onClickBorrowReceipts = {this.props.args.onClickBorrowReceipts}
+                        id={1}
                     />
 
                 </aside>
@@ -109,10 +116,13 @@ class Inventory extends React.Component {
                     </div>
                 </header>
 
-                <main className="inventory_main">
+                <main className="inventory_main_inventory" style={this.props.args.sideBarStyle[0]}>
                     {itemComponentsRow}
                 </main>
                 
+                <main className="inventory_main_borrow_receipts" style={this.props.args.sideBarStyle[1]}>
+                    <BorrowReceipts/>
+                </main>
             </div>
         )
     }

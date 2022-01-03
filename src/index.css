@@ -491,7 +491,8 @@ body{
 
 /* ITEM COMPONENTS JSX */
 
-.inventory_main{
+.inventory_main_inventory,
+.inventory_main_borrow_receipts{
     position: absolute;
     top:7vh;
     left:17%;
@@ -671,7 +672,8 @@ desktop: 1200px; */
     }
 
     /* ITEM COMPONENTS JSX */
-    .inventory_main{
+    .inventory_main_inventory,
+    .inventory_main_borrow_receipts{
         top:13vh;
         left:0;
         width:100%;
@@ -717,7 +719,8 @@ desktop: 1200px; */
     }
 
     /* ITEM COMPONENTS JSX */
-    .inventory_main{
+    .inventory_main_inventory,
+    .inventory_main_borrow_receipts{
         top:7vh;
         left:0;
         width:100%;
