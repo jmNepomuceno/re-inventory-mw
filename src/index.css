@@ -504,11 +504,109 @@ body{
 
 .inventory_information_outer_div{
     position:absolute;
-    top:5%;
+    top:10%;
     left:5%;
     width:90%;
+    height:80%;
+    background:#d8e7f3;
+    /* background:lightgreen; */
+    border-radius: 5px;
+    /* border:1px solid black; */
+}
+
+.inventory_information_outer_div .inventory_information_inner_div{
+    position:absolute;
+    top:5%;
+    left:2%;
+    width:95%;
     height:90%;
-    background:#f2f2f2;
+    border:1px solid black;
+    border-radius: 5px;
+    display:flex;
+}
+
+.inventory_information_inner_div .borrowed_information_div,
+.inventory_information_inner_div .return_information_div,
+.inventory_information_inner_div .how_to_claim_div{
+    width:33.3%;
+    height:100%;
+    border-right:1px solid black;
+}
+
+.inventory_information_inner_div .borrowed_information_div .borrow_info_title,
+.inventory_information_inner_div .return_information_div .return_info_title,
+.inventory_information_inner_div .how_to_claim_div .claim_title{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: #5192c8;
+    width:50%;
+    text-align: center;
+    background : whitesmoke;
+    margin:5% 0 0 25%;
+}
+
+.inventory_information_inner_div .row_divs{
+    width:90%;
+    height:8%;
+    border-bottom:2px solid #990011ff;
+    margin : 5% 0 0 5%;
+    /* border:1px solid black; */
+    display:flex;
+}
+
+.inventory_information_inner_div .row_divs .title_lbl{
+    background : black;
+    color:white;
+    width:50%;
+    height:90%;
+    font-size:1.1rem;
+    line-height:30px;
+    text-align: center;
+    /* padding:2px; */
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.inventory_information_inner_div .row_divs .info_lbl{
+    color:black;
+    width:40%;
+    height:30px;
+    font-size:1.2rem;
+    line-height:30px;
+    margin-left:5%;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.inventory_information_inner_div .how_to_claim_div{
+    position:relative;
+    border-right: none;
+}
+
+.inventory_information_inner_div .how_to_claim_div .claim_note{
+    width:90%;
+    margin:5% 0 0 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:justify;
+    font-size:1rem;
+}
+
+.inventory_information_inner_div .how_to_claim_div button{
+    position:absolute;
+    bottom:5%;
+    width:35%;
+    height:7%;
+    font-size:1rem;
+    letter-spacing:2px;
+    cursor: pointer;
+    background:transparent;
+}
+
+.inventory_information_inner_div .how_to_claim_div .cancel_btn{
+    border:1px solid red;
+    left:10%;
+}
+
+.inventory_information_inner_div .how_to_claim_div .confirm_btn{
+    border:1px solid green;
+    right:10%;
 }
 
 .item_div{
