@@ -35,7 +35,7 @@ class App extends React.Component {
                     display : "none"     
                 }
             ],
-            is_borrowed : true,
+            is_borrowed : false,
             brw_rtrn_info_style : {
                 display : "none"
             },
