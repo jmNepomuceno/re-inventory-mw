@@ -55,9 +55,24 @@ class Inventory extends React.Component {
             display : (window_width <= 770) ? "block" : "none"
         }
         
-        //console.log(this.props.args.sideBarStyle)
+        // console.log(this.props.args.itemDB[0].id)
 
         const itemComponentsRow = this.props.args.itemDB.map(elem => { 
+            let temp_index = this.props.args.temp_decrement_btn_index
+            if(temp_index === elem.id){
+                return(
+                    <ItemComponents 
+                        key={elem.id} 
+                        args={{
+                            elem : elem,
+                            onIncrementPcs : this.props.args.onIncrementPcs,
+                            onDecrementPcs : this.props.args.onDecrementPcs,
+                            confirm_btn_style : this.props.args.confirm_btn_style,
+                            onConfirmBorrow : this.props.args.onConfirmBorrow,
+                        }} 
+                    />    
+                )
+            }
             return(
                 <ItemComponents 
                     key={elem.id} 
@@ -65,11 +80,12 @@ class Inventory extends React.Component {
                         elem : elem,
                         onIncrementPcs : this.props.args.onIncrementPcs,
                         onDecrementPcs : this.props.args.onDecrementPcs,
-                        confirm_btn_style : this.props.args.confirm_btn_style,
+                        confirm_btn_style : {},
                         onConfirmBorrow : this.props.args.onConfirmBorrow,
                     }} 
                 />    
             )
+            
         })
 
         return(
@@ -119,7 +135,7 @@ class Inventory extends React.Component {
 
                 <main className="inventory_main_inventory" style={this.props.args.sideBarStyle[0]}>
                     {itemComponentsRow}
-                    <div className="inventory_information_outer_div">
+                    <div style={this.props.args.brw_rtrn_info_style} className="inventory_information_outer_div">
                         <div className="inventory_information_inner_div">
 
                             <div className="borrowed_information_div">
@@ -157,8 +173,22 @@ class Inventory extends React.Component {
                                     the borrow request will be gone. Make sure to have a copy of this receipt.
                                 </p>
 
-                                <button className="cancel_btn">CANCEL</button>
-                                <button className="confirm_btn">CONFIRM</button>
+                                <button 
+                                    className="cancel_btn"
+                                    onClick={
+                                        () => this.props.args.onFinalConfirmBorrow("CANCEL")
+                                    }
+                                >
+                                    CANCEL
+                                </button>
+                                <button 
+                                    className="confirm_btn" 
+                                    onClick={
+                                        () => this.props.args.onFinalConfirmBorrow("CONFIRM")
+                                    }
+                                >
+                                    CONFIRM
+                                </button>
                             </div>
 
                         </div>

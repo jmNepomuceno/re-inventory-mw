@@ -509,9 +509,7 @@ body{
     width:90%;
     height:80%;
     background:#d8e7f3;
-    /* background:lightgreen; */
     border-radius: 5px;
-    /* border:1px solid black; */
 }
 
 .inventory_information_outer_div .inventory_information_inner_div{
@@ -597,6 +595,7 @@ body{
     letter-spacing:2px;
     cursor: pointer;
     background:transparent;
+    border-radius: 10px;
 }
 
 .inventory_information_inner_div .how_to_claim_div .cancel_btn{

@@ -35,7 +35,12 @@ class App extends React.Component {
                     display : "none"     
                 }
             ],
-            is_borrowed : true
+            is_borrowed : true,
+            brw_rtrn_info_style : {
+                display : "none"
+            },
+            temp_confirm_btn_index : -1,
+            temp_decrement_btn_index : -1
         }
 
         this.limitPcs = itemDB.map(elem => elem.pcs)
@@ -91,6 +96,18 @@ class App extends React.Component {
             }))
         }
 
+        for(let i = 1; i <= this.state.inventory.length; i++){
+            if(id !== i){
+                this.setState(prevState => ({
+                    inventory: prevState.inventory.map(
+                        obj => (obj.id === i ? Object.assign(obj, { pcs: this.limitPcs[i - 1] }) : obj)
+                    )
+                }))
+            }
+        }
+
+        //console.log(this.state.inventory)
+
         this.setState(prevState =>({
             ...prevState,
             confirm_btn_style : {
@@ -99,10 +116,18 @@ class App extends React.Component {
                 pointerEvents : "auto"
             }
         }))
+
+        this.setState({
+            temp_decrement_btn_index : id
+        })
     }
 
     handleConfirmBorrow = (id) =>{
-        this.limitPcs[id - 1] = this.state.inventory[id - 1].pcs
+
+        this.setState({
+            temp_confirm_btn_index : id
+        })
+        
 
         this.setState({
             confirm_btn_style : {
@@ -110,9 +135,13 @@ class App extends React.Component {
             }
         })
 
-        this.setState({
-            is_borrowed : !this.state.is_borrowed
-        })
+        this.setState(prevState =>({
+            ...prevState,
+            brw_rtrn_info_style : {
+                ...prevState.brw_rtrn_info_style,
+                display : "block"
+            }
+        }))
     }
 
     handleInventoryItems = () =>{
@@ -142,8 +171,29 @@ class App extends React.Component {
         })
     }
 
+    handleFinalConfirmBorrow = (what) => {
+        if(what === "CONFIRM"){
+            alert("Successfuly Borrowed Item")
+
+            let id = this.state.temp_confirm_btn_index
+            this.limitPcs[id - 1] = this.state.inventory[id - 1].pcs
+            
+            this.setState({
+                is_borrowed : !this.state.is_borrowed
+            })
+        }
+        
+        this.setState(prevState =>({
+            ...prevState,
+            brw_rtrn_info_style : {
+                ...prevState.brw_rtrn_info_style,
+                display : "none"
+            }
+        }))
+    }
+
     render(){
-        // console.log(this.state.is_borrowed)
+        // console.log(this.state.temp_decrement_btn_index)
         return(
             <Router basename='re-inventory-mw'>
                 <React.Fragment>
@@ -176,7 +226,10 @@ class App extends React.Component {
                                         onClickInventoryItems : this.handleInventoryItems,
                                         onClickBorrowReceipts : this.handleBorrowReceipts,
                                         sideBarStyle : this.state.sideBarStyle,
-                                        is_borrowed : this.state.is_borrowed
+                                        is_borrowed : this.state.is_borrowed,
+                                        brw_rtrn_info_style : this.state.brw_rtrn_info_style,
+                                        onFinalConfirmBorrow : this.handleFinalConfirmBorrow,
+                                        temp_decrement_btn_index : this.state.temp_decrement_btn_index
                                     }
                                 }
                             />
