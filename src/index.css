@@ -521,6 +521,9 @@ body{
     border:1px solid black;
     border-radius: 5px;
     display:flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .inventory_information_inner_div .borrowed_information_div,
@@ -828,6 +831,31 @@ desktop: 1200px; */
         font-size: 1.7rem;
         left:70%;
     }
+
+    .inventory_information_outer_div{
+        top:2%;
+        height:150vh;
+    }
+
+    .inventory_information_inner_div .row_divs{
+        height:5%;
+    }
+
+    .inventory_information_inner_div .borrowed_information_div .borrow_info_title,
+    .inventory_information_inner_div .return_information_div .return_info_title,
+    .inventory_information_inner_div .how_to_claim_div .claim_title{
+        font-size:1rem;
+    }
+
+    .inventory_information_inner_div .row_divs .title_lbl,
+    .inventory_information_inner_div .row_divs .info_lbl{
+        font-size:0.7rem;
+    }
+
+    .inventory_information_inner_div .how_to_claim_div button{
+        font-size:0.7rem;
+
+    }
 }
 
 @media (max-width: 576px){ /* Mobile */
@@ -886,4 +914,46 @@ desktop: 1200px; */
         font-size: 1.5rem;
         left:55%;
     }
+
+    .inventory_information_outer_div{
+            top:2%;
+            height:210vh;
+    }
+
+    .inventory_information_outer_div .inventory_information_inner_div{
+        top:2%;
+        height:95%;
+        flex-direction: column;
+    }
+
+
+    .inventory_information_inner_div .borrowed_information_div,
+    .inventory_information_inner_div .return_information_div,
+    .inventory_information_inner_div .how_to_claim_div{
+        width:100%; 
+    }
+
+    .inventory_information_inner_div .row_divs{
+        height:8%;
+    }
+
+    .inventory_information_inner_div .borrowed_information_div .borrow_info_title,
+    .inventory_information_inner_div .return_information_div .return_info_title,
+    .inventory_information_inner_div .how_to_claim_div .claim_title{
+        font-size:1.3rem;
+    }
+
+    .inventory_information_inner_div .row_divs .title_lbl{
+        font-size:1.1rem;
+    }
+
+    .inventory_information_inner_div .row_divs .info_lbl{
+        font-size:1.2rem;
+    }
+
+    .inventory_information_inner_div .how_to_claim_div button{
+        font-size:1rem;
+
+    }
+
 }
